@@ -1,0 +1,8 @@
+<h1>Follow</h1>
+<ul>
+  <div class="form-inline">
+  <div class="form-group"><% @users.each do |u| %>
+  <li><%= link_to u.name %></li>
+  <li><%= gravatar_for(@user) %></li></div></div>
+  <% end %>
+</ul>
