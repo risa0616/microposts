@@ -1,8 +1,22 @@
-<h1>Follow</h1>
-<ul>
-  <div class="form-inline">
-  <div class="form-group"><% @users.each do |u| %>
-  <li><%= link_to u.name %></li>
-  <li><%= gravatar_for(@user) %></li></div></div>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+      <h1>
+        <%= gravatar_for @user %>
+        <%= @user.name %>
+      </h1>
+      <div><%= link_to "Followings", followings_user_path(@user) %></div>
+      <div><%= link_to "Followers", followers_user_path(@user) %></div>
+    </section>
+  </aside>
+  
+  
+<div class="col-md-8">
+  <h2>Follow</h2>
+  <ul><% @users.each do |u| %>
+  <li class="clearfix"><%= link_to u.name ,user_path(u)%><br>
+  <%= gravatar_for(@user) %></li>
   <% end %>
-</ul>
+  </ul>
+</div>
+</div>
