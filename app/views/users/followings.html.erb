@@ -10,13 +10,13 @@
     </section>
   </aside>
   
-  
 <div class="col-md-8">
   <h2>Follow</h2>
   <ul><% @users.each do |u| %>
   <li class="clearfix"><%= link_to u.name ,user_path(u)%><br>
   <%= gravatar_for(@user) %></li>
   <% end %>
+  <%= paginate @users %>
   </ul>
 </div>
 </div>
