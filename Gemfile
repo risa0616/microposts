@@ -48,5 +48,7 @@ group :development, :test do
   
   gem 'ransack' #検索機能
   
+  gem 'rails_12factor', group: :production #エラーheroku log検索
+  
 end
 
