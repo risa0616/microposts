@@ -1,8 +1,5 @@
 class UsersController < ApplicationController
   
-  def index
-  end
-  
   def followings
     @user = User.find(params[:id])
     @users = @user.following_users.page(params[:page]).per(5)
