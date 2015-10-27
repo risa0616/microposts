@@ -28,6 +28,13 @@ gem 'bootstrap-sass'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+gem 'kaminari' #ページ
+
+gem 'ransack' #検索機能
+
+gem 'rails_12factor', group: :production #エラーheroku log検索
+  
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
@@ -43,12 +50,5 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-  
-  gem 'kaminari' #ページ
-  
-  gem 'ransack' #検索機能
-  
-  gem 'rails_12factor', group: :production #エラーheroku log検索
-  
 end
 
